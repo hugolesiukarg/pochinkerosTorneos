@@ -26,6 +26,6 @@ app.set('view engine','ejs');
 
 
 //conectar a base
-mongoose.connect('mongodb://localhost/pochinkeros')
+/*mongoose.connect('mongodb://localhost/pochinkeros')
 .then(db =>console.log('exito conecta'))
-.catch(err =>console.log('error che qlia'));
+.catch(err =>console.log('error che qlia'));*/

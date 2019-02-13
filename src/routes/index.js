@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
 });
 
 
-router.post('/AgregarJugador', async (req, res) => {
+router.post('/Jugadores', async (req, res) => {
 
     const NvoJugador = new Jugador({
         nick: req.body.nick,
@@ -22,7 +22,7 @@ router.post('/AgregarJugador', async (req, res) => {
 
 });
 
-router.post('/QuitarJugador/:id', async (req, res) => {
+router.detele('/Jugadores/:id', async (req, res) => {
     const { id } = req.params
     await Jugador.remove({ _id: id })
     console.log('weno al menos no dio error');
@@ -31,7 +31,7 @@ router.post('/QuitarJugador/:id', async (req, res) => {
 });
 
 
-router.post('/ActualizarJugador/:id', async (req, res) => {
+router.put('/Jugadores/:id', async (req, res) => {
 
     const { id } = req.params
     await Jugador.update({ _id: id }, { nick: req.body.nick,
@@ -46,7 +46,7 @@ router.post('/ActualizarJugador/:id', async (req, res) => {
 
 
 
-router.get('/Jugadores/', async (req, res) => {
+router.get('/Jugadores/:id', async (req, res) => {
 
     //const { id } = req.params
     const jugadores = await Jugador.find();
